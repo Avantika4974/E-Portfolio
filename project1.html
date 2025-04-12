@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Eye Disease Prediction</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="project-detail-card">
+    <h1>Eye Disease Prediction using CNN</h1>
+    <h4 class="tagline">Helping detect eye diseases early through deep learning.</h4>
+  
+    <section class="rounded-box">
+        <h3>🧩 Problem Statement</h3>
+        <p class="problem-text">
+          Millions suffer from vision loss due to late detection of common eye diseases like Cataract and Glaucoma. 
+          Manual diagnosis using retinal images is time-consuming and requires expert intervention, which isn't always accessible. 
+          This project uses a CNN model to automate early disease detection from eye images, aiming to improve diagnostic speed, accuracy, and accessibility—especially in remote areas.
+        </p>
+        <div class="disease-grid">
+            <div class="disease1-item">
+              <img src="C.png" alt="Cataract">
+              <p class="caption">Cataract</p>
+            </div>
+            <div class="disease1-item">
+              <img src="G.jpg" alt="Glaucoma">
+              <p class="caption">Glaucoma</p>
+            </div>
+            <div class="disease1-item">
+              <img src="diabetic-retinopathy.jpg" alt="Diabetic Retinopathy">
+              <p class="caption">Diabetic Retinopathy</p>
+            </div>
+            <div class="disease1-item">
+              <img src="H.jpg" alt="Normal Eye">
+              <p class="caption">Normal Eye</p>
+            </div>
+        </div>
+      </section>
+      
+      <section class="rounded-box">
+        <h3>🧠 Model Used</h3>
+        <p class="problem-text">
+          <strong>1. Data Preprocessing:</strong> Resized images to 224x224, normalized pixel values to 0–1, applied augmentation (flip, rotate, zoom), and encoded labels.<br>
+          <strong>2. CNN Model:</strong> Built with 3 convolutional layers, ReLU activations, max pooling, and dropout. Dense and softmax layers used for classification.<br>
+          <strong>3. Training:</strong> Used Adam optimizer, cross-entropy loss, batch size of 32, trained for ~30 epochs. Accuracy monitored via validation set.<br>
+          <strong>4. Evaluation:</strong> Accuracy and confusion matrix used. Best performance seen in Cataract class.<br>
+          <strong>5. Deployment:</strong> Model deployed using Flask. User uploads an image → prediction returned.
+        </p>
+      </section>
+      
+  
+      <section class="rounded-box">
+        <h3>📂 Dataset</h3>
+        <p class="problem-text">Eye Disease Dataset from Kaggle. Includes 5,000+ fundus images across 4 classes: Cataract, Glaucoma, Diabetic Retinopathy and Normal.</p>
+      </section>
+      
+      <section class="rounded-box">
+        <h3>🛠 Tech Stack</h3>
+        <ul>
+          <li class="problem-text">Python, TensorFlow/Keras</li>
+          <li class="problem-text">Google Colab</li>
+          <li class="problem-text">Flask (for deployment)</li>
+          <li class="problem-text">OpenCV, Pandas</li>
+        </ul>
+      </section>
+      
+      <section class="rounded-box">
+        <h3>📈 Results</h3>
+        <p class="problem-text">Achieved 91% test accuracy. Confusion matrix showed strong recall for Cataract cases. Model generalizes well on unseen data.</p>
+      </section>
+      
+      <section class="rounded-box">
+        <h3>🖼️ Implementation Screenshots</h3>
+        <div class="screenshot-grid">
+          <div class="screenshot-item">
+            <p><strong>1. Home Page</strong></p>
+            <img src="Home.png" alt="Folder Structure">
+            
+          </div>
+          <div class="screenshot-item">
+            <p><strong>2. About Us</strong></p>
+            <img src="Abtus.png" alt="GUI Interface">
+            
+          </div>
+          <div class="screenshot-item">
+            <p><strong>3. Information Page</strong></p>
+            <img src="Predict.png" alt="User Input">
+          </div>
+          <div class="screenshot-item">
+            <p><strong>4. User Entering Information</strong></p>
+            <img src="inp.png" alt="QR Output">
+          </div>
+          <div class="screenshot-item">
+            <p><strong>5. Final Analysis</strong></p>
+            <img src="Op.png" alt="Scanning QR Code">
+          </div>
+        </div>
+      </section>
+
+      <section class="rounded-box">
+        <h3>🎯 Deployment</h3>
+        <p class="problem-text">Model deployed using Flask with a simple UI to upload and predict eye disease class. Hosted locally for now.</p>
+      </section>
+      
+  
+    <section class="rounded-box">
+      <h3>💡 Learnings</h3>
+      <p class="problem-text">Gained experience with CNN architecture, image preprocessing, handling class imbalance, and deploying models with Flask.</p>
+    </section>
+  
+    <section class="rounded-box">
+      <h3>🚀 What's Next?</h3>
+      <p class="problem-text">Extend model to support more diseases. Optimize for mobile deployment using TensorFlow Lite.</p>
+    </section>
+  
+    <section class="rounded-box">
+      <h3>🔗 Links</h3>
+      <ul>
+        <li class="problem-text"><a href="https://github.com/Avantika4974/Eye-Disease-Prediction-using-CNN" target="_blank">GitHub Repository</a></li>
+      </ul>
+    </section>
+  </div>
+  <div class="back-button-container">
+    <a href="index.html#projects" class="back-button">← Back to Projects</a>
+  </div>
+</body>
+</html>

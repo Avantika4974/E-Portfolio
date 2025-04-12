@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hateful Meme Detection</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="project-detail-card">
+    <h1>Hateful Meme Detection Using Multimodals</h1>
+    <h4 class="tagline">Teaching machines to read between the lines — detecting harmful intent in memes through vision and language.</h4>
+  
+    <section class="rounded-box">
+        <h3>🧩 Problem Statement</h3>
+        <p class="problem-text">
+            Memes are often used to spread humor, but they can also subtly or overtly spread hate. 
+            Traditional hate speech detection systems often fail to recognize harmful content when it’s embedded in images with sarcastic or ambiguous text. 
+            This project aims to detect hateful memes by combining both visual and textual cues using multi-modal deep learning models.
+        </p>
+        <div class="disease-grid">
+            <div class="disease1-item">
+              <img src="hf.jpg" alt="Hateful Mmeme">
+              <p class="caption">Hateful Meme</p>
+            </div>
+            <div class="disease1-item">
+              <img src="hf2.jpg" alt="Glaucoma">
+              <p class="caption">Hateful Meme</p>
+            </div>
+            <div class="disease1-item">
+              <img src="NonHateful1.jpg" alt="Diabetic Retinopathy">
+              <p class="caption">Non-Hateful Meme</p>
+            </div>
+            <div class="disease1-item">
+              <img src="Nh2.jpg" alt="Normal Eye">
+              <p class="caption">Non-Hateful Meme</p>
+            </div>
+        </div>
+      </section>
+      
+      <section class="rounded-box">
+        <h3>🧠 Model Used</h3>
+        <p class="problem-text">
+          <strong>1.</strong> CLIP (Contrastive Language–Image Pretraining) by OpenAI was used.<br>
+          <strong>2.</strong> CLIP understands both image and text together, making it ideal for meme interpretation.<br>
+          <strong>3.</strong> The model was fine-tuned for classification into Harmful, Partially Harmful, and Harmless classes.<br>
+          <strong>4.</strong> Text and image embeddings were fused and passed through a classifier head (MLP).<br>
+        </p>
+      </section>
+      
+  
+      <section class="rounded-box">
+        <h3>📂 Dataset</h3>
+        <p class="problem-text"><strong>Used the Facebook Hateful Meme Dataset.</strong><br>
+
+            <strong>1.</strong>Contains 10k+ memes with aligned image and text captions.<br>
+            
+            <strong>2.</strong>Each meme is labeled as hateful or non-hateful.<br>
+            
+            <strong>3.</strong>Also experimented with a custom dataset structured into:<br>
+            
+            <strong>a.</strong>Harm-C/ (clear harm)<br>
+            
+            <strong>b.</strong>Harm_P/ (partially harmful)<br>
+            
+            <strong>c.</strong>Harmmeme-saved/ (non-harmful)</p><br>
+      </section>
+      
+      <section class="rounded-box">
+        <h3>🛠 Tech Stack</h3>
+        <ul>
+          <li class="problem-text">Python, TensorFlow/Keras</li>
+          <li class="problem-text">PyTorch</li>
+          <li class="problem-text">CLIP (via OpenAI’s implementation)</li>
+          <li class="problem-text">Google Colab</li>
+          <li class="problem-text">Matplotlib, PIL, Sklearn for visualization & analysis</li>
+        </ul>
+      </section>
+      
+      <section class="rounded-box">
+        <h3>📈 Results</h3>
+        <p class="problem-text">Achieved 85%+ accuracy on test data.
+            The model successfully detected sarcasm-based hate in most cases.
+            Confusion matrix showed improved performance with multi-class labeling (harmful, partially harmful, harmless).
+        </p>
+      </section>
+
+      <section class="rounded-box">
+        <h3>🖼️ Implementation Screenshots</h3>
+        <div class="screenshot-grid">
+          <div class="screenshot-item">
+            <p><strong> How CLIP extracts text from images</strong></p>
+            <img src="1.png" alt="Folder Structure">
+            
+          </div>
+          <div class="screenshot-item">
+            
+            <img src="2.png" alt="GUI Interface">
+            
+          </div>
+          <div class="screenshot-item">
+            
+            <img src="3.png" alt="User Input">
+          </div>
+          <div class="screenshot-item">
+            
+            <img src="4.png" alt="QR Output">
+          </div>
+        </div>
+      </section>
+      
+      <section class="rounded-box">
+        <h3>🎯 Deployment</h3>
+        <p class="problem-text">Deployed as a web app using Flask. Users can upload a meme → model predicts its harmfulness.UI shows the image, prediction label, and confidence score.Currently hosted locally / on Colab.</p>
+      </section>
+      
+  
+    <section class="rounded-box">
+      <h3>💡 Learnings</h3>
+      <p class="problem-text">Gained experience Gained understanding of multi-modal models.Understood the importance of contextual embedding in hate speech detection.Learned to handle imbalanced datasets and subtle bias in annotation.</p>
+    </section>
+  
+    <section class="rounded-box">
+      <h3>🚀 What's Next?</h3>
+      <p class="problem-text">Integrate more robust text sentiment analysis with OCR. Improve robustness using data augmentation and adversarial examples.Extend the system to support real-time social media monitoring.Deploy on cloud for wider accessibility.</p>
+    </section>
+  </div>
+  <div class="back-button-container">
+    <a href="index.html#projects" class="back-button">← Back to Projects</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RAG + BioBERT Healthcare Pipeline</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="project-detail-card">
+    <h1>RAG + BioBERT Healthcare Pipeline</h1>
+    <h4 class="tagline">Empowering smarter clinical decisions with contextual retrieval and biomedical understanding.</h4>
+  
+    <section class="rounded-box">
+        <h3>🧩 Problem Statement</h3>
+        <p class="problem-text">
+          Traditional healthcare recommendation systems struggle with understanding and interpreting complex biomedical language due 
+          to the unstructured nature of medical data and reliance on keyword-based retrieval. 
+          These systems often fail to provide personalized, context-aware responses, leading to incomplete or irrelevant medical guidance. 
+          There is a critical need for a system that can understand domain-specific queries, retrieve relevant information efficiently, and 
+          generate coherent, medically accurate recommendations.
+        </p>
+      </section>
+      
+      <section class="rounded-box">
+        <h3>🧠 Model Used</h3>
+        <p class="problem-text">
+          The proposed solution integrates a Retrieval-Augmented Generation (RAG) framework with BioBERT, FAISS, and Google Gemini API to create a pipeline capable of delivering personalized healthcare recommendations:<br>
+          <strong>1.Embedding Generation</strong> Fine-tuned BioBERT model to embed medical queries and documents.Uses attention mechanisms to capture symptoms, treatments, and outcomes.<br>
+          <strong>2. Dense Retrieval</strong> FAISS (IVF-PQ indexing) enables fast and scalable document retrieval.Re-ranking based on semantic similarity and medical relevance.<br>
+          <strong>3. Natural Language Generation </strong> Utilizes Google Gemini API to generate context-aware, factual responses.Includes prompt engineering tailored to different medical query types.<br>
+          <strong>4. Optimization Loop </strong> Incorporates a feedback mechanism for iterative improvements based on expert review.<br>
+        </p>
+      </section>
+      
+  
+      <section class="rounded-box">
+        <h3>📂 Dataset</h3>
+        <p class="problem-text"><strong>PubMedQA – biomedical question answering dataset sourced from PubMed.</strong><br>
+
+            <strong>1.</strong>SQuAD-style medical Q&A (optionally used for fine-tuning BioBERT).<br>
+            <strong>2.</strong>Open-access research papers from PubMed Central as the knowledge base for retrieval.<br>
+            <strong>3.Scope: </strong>Medical literature across 9 disease categories and 50+ conditions.<br>          
+            <strong>4.Preprocessing Techniques:</strong> Named Entity Recognition using ICD-10 codes. Contextual filtering to remove irrelevant or redundant information.<br>
+        
+            
+      </section>
+      
+      <section class="rounded-box">
+        <h3>🛠 Tech Stack</h3>
+        <ul>
+          <li class="problem-text">Python, TensorFlow/Keras</li>
+          <li class="problem-text">PyTorch</li>
+          <li class="problem-text">Hugging Face Transformers (for BioBERT, RAG)</li>
+          <li class="problem-text">Google Colab</li>
+          <li class="problem-text">FAISS or ElasticSearch (for document retrieval)</li>
+          <li class="problem-text">Streamlit/Flask (for interface)</li>
+        </ul>
+      </section>
+      
+      <section class="rounded-box">
+        <h3>📈 Results</h3>
+        <p class="problem-text">AAchieved 85%+ top-k retrieval accuracy on biomedical queries.
+            BioBERT improved answer relevance significantly compared to GPT-based baselines.
+            Latency optimized to under 2 seconds per query for small-scale corpus.
+        </p>
+      </section>
+
+      <section class="rounded-box">
+        <h3>🖼️ Implementation Screenshots</h3>
+        <div class="screenshot-grid">
+          <div class="screenshot-item">
+            <p><strong>1. Disease Distribution</strong></p>
+            <img src="a.png" alt="Folder Structure">
+            
+          </div>
+          <div class="screenshot-item">
+            <p><strong>2. Example Query + Retrieved Documents</strong></p>
+            <img src="b.png" alt="GUI Interface">
+            
+          </div>
+          <div class="screenshot-item">
+            <p><strong>3. Gemini Api converting retrieved documents into understanble responses</strong></p>
+            <img src="c copy.png" alt="User Input">
+          </div>
+          <div class="screenshot-item">
+            <p><strong>4. Performance Metrics</strong></p>
+            <img src="d.png" alt="QR Output">
+          </div>
+        </div>
+      </section>
+      
+      
+      <section class="rounded-box">
+        <h3>🎯 Deployment</h3>
+        <p class="problem-text">Deployed via Streamlit app for demo use. User inputs a biomedical question → pipeline retrieves relevant docs → BioBERT generates the final response. Hosted locally and compatible with cloud deployment via Hugging Face Spaces or AWS.</p>
+      </section>
+      
+  
+    <section class="rounded-box">
+      <h3>💡 Learnings</h3>
+      <p class="problem-text">RAG architecture significantly boosts answer accuracy in domain-specific tasks.BioBERT performs better than general BERT or GPT models in healthcare NLP tasks.Semantic retrieval (DPR) works better than traditional keyword-based methods (like BM25).
+      </p>
+    </section>
+  
+    <section class="rounded-box">
+      <h3>🚀 What's Next?</h3>
+      <p class="problem-text"> Scale up the corpus with more diverse biomedical literature (clinical notes, drug databases).
+        Add confidence score visualization for better user trust. Explore multilingual support for global clinical queries. Integrate speech-to-text module for doctor voice input.
+      </p>
+    </section>
+  </div>
+  <div class="back-button-container">
+    <a href="index.html#projects" class="back-button">← Back to Projects</a>
+  </div>
+</body>
+</html>
